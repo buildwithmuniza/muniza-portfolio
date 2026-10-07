@@ -2617,3 +2617,37 @@ body.page-changing main {
     position: relative;
     z-index: 2;
 }
+
+#typing-text {
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #ffffff 45%,
+        #ff5e36 75%,
+        #ffffff 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    display: inline-block;
+}
+
+.typing-cursor {
+    display: inline-block;
+    margin-left: 4px;
+    color: #ff5e36;
+    font-weight: 400;
+    animation: cursorBlink 0.7s infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
